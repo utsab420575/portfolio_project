@@ -1,0 +1,60 @@
+// Font
+// Set the default sans-serif font family to Poppins across Bootstrap
+$font-family-sans-serif: 'Poppins', sans-serif;
+
+// Color
+// Define custom theme colors for Bootstrap components
+$primary: #cc005f;       // Main brand color (pink/red)
+$secondary: #990047;     // Secondary color (darker red)
+$dark: #000;             // Black color definition
+$light: #f4f4f4;         // Light gray color definition
+
+// Buttons
+// Customize button appearance parameters
+$button-radius: 0;       // Remove border-radius for square buttons
+$button-padding-x: 30px; // Horizontal padding for buttons
+$button-padding-y: 12px; // Vertical padding for buttons
+
+// Apply button settings to all button sizes and states
+$btn-border-radius: $button-radius;        // Default button border radius
+$btn-border-radius-sm: $button-radius;    // Small button border radius
+$btn-border-radius-lg: $button-radius;    // Large button border radius
+$btn-padding-y: $button-padding-y;        // Default vertical padding
+$btn-padding-y-lg: $button-padding-y;     // Large button vertical padding
+$btn-padding-y-sm: $button-padding-y;     // Small button vertical padding
+$btn-padding-x: $button-padding-x;        // Default horizontal padding
+$btn-padding-x-lg: $button-padding-x;     // Large button horizontal padding
+$btn-padding-x-sm: $button-padding-x;     // Small button horizontal padding
+
+// Navigation
+// Customize navbar toggler appearance
+$navbar-toggler-border-radius: 5px; // Slightly rounded corners for mobile menu button
+
+// Spacing
+// Extend Bootstrap's default spacing scale
+$spacer: 1rem !default; // Base spacing unit (16px assuming default browser settings)
+$spacers: (
+        0: 0,           // 0 spacing
+        1: $spacer * 0.25,  // 0.25rem (4px)
+        2: $spacer * 0.5,   // 0.5rem (8px)
+        3: $spacer,         // 1rem (16px)
+        4: $spacer * 1.5,   // 1.5rem (24px)
+        5: $spacer * 3,     // 3rem (48px)
+        6: $spacer * 6,     // 6rem (96px) - custom size
+        7: $spacer * 8,     // 8rem (128px) - custom size
+        8: $spacer * 12,    // 12rem (192px) - custom size
+) !default;
+
+// Container
+// Customize maximum container widths for different breakpoints
+$container-max-widths: (
+        sm: 540px,   // Small screen container
+        md: 720px,   // Medium screen container
+        lg: 960px,   // Large screen container
+        xl: 980px,   // Extra large screen container (custom size)
+        xxl: 1000px, // Extra extra large screen container (custom size)
+) !default;
+
+// Import Bootstrap SCSS after customizations
+// This allows our custom variables to override Bootstrap defaults
+@import '../node_modules/bootstrap/scss/bootstrap';

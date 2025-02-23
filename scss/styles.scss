@@ -1,0 +1,74 @@
+/* Hero section background image with dark overlay */
+.header .hero {
+  background: #151515 url('../images/intro-bg.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+/* Overlay effect to darken the hero section for better text visibility */
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+}
+
+/* Custom font styling for the roles text */
+.hero .roles {
+  font-family: 'lora-regular', serif;
+}
+
+/* Positioning the social icons at the bottom */
+.hero .social {
+  bottom: 50px;
+}
+
+
+/* Blinking cursor animation */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; } /* Cursor is fully visible at the start and end of the animation */
+  50% { opacity: 0; } /* Cursor is invisible halfway through the animation */
+}
+
+/* Styling for the pseudo-element that represents the blinking cursor */
+#typing-text::after {
+  color: palevioletred; /* Color of the cursor */
+  content: "\f246"; /* Unicode for the Font Awesome 'i-cursor' icon */
+  font-family: "Font Awesome 6 Free"; /* Specifies the Font Awesome font family */
+  font-weight: 900; /* Required for solid icons in Font Awesome */
+  animation: blink-cursor 0.7s infinite; /* Applies the blinking animation with a 0.7s duration, looping infinitely */
+  margin-left: 5px; /* Adds space between the text and the cursor */
+  font-size: 0.8em; /* Adjusts the size of the cursor relative to the text */
+  vertical-align: middle; /* Aligns the cursor vertically with the middle of the text */
+}
+
+.about-img {
+  width: 200px;
+}
+
+
+
+.project:hover {
+  /* Scale the element to 1.05 times its original size */
+  transform: scale(1.05);
+
+  /* Add a smooth transition effect for all properties over 0.5 seconds with an ease-in-out timing function */
+  transition: all 0.5s ease-in-out;
+
+  /* Reduce the opacity of the element to 0.8, making it slightly transparent */
+  opacity: 0.8;
+}
+
+/* Responsive styles for smaller screens (below 767px width) */
+@media (max-width: 767px) {
+  /* Adjusting icon size for better mobile visibility */
+  .hero .social i {
+    font-size: 30px;
+  }
+
+  /* Reducing font size of roles text for smaller screens */
+  .hero .roles {
+    font-size: 18px !important;
+  }
+
+  .about .about-content{
+    flex-direction: column;
+  }
+}
