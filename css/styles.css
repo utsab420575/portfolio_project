@@ -41,6 +41,26 @@
   vertical-align: middle; /* Aligns the cursor vertically with the middle of the text */
 }
 
+.services {
+  background: url("../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  start: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.services .container {
+  z-index: 10;
+}
+
 .about-img {
   width: 200px;
 }
@@ -52,6 +72,12 @@
   transition: all 0.5s ease-in-out;
   /* Reduce the opacity of the element to 0.8, making it slightly transparent */
   opacity: 0.8;
+}
+
+/* Add this to your CSS file */
+.form-control::placeholder {
+  color: white !important; /* Set placeholder text to white */
+  opacity: 0.7; /* Ensure full visibility */
 }
 
 /* Responsive styles for smaller screens (below 767px width) */
@@ -66,5 +92,11 @@
   }
   .about .about-content {
     flex-direction: column;
+  }
+  .stats .stat {
+    border-right: 0 !important;
+    margin-bottom: 40px;
+    border-bottom: var(--bs-dark) solid 1px;
+    padding-bottom: 20px;
   }
 }
